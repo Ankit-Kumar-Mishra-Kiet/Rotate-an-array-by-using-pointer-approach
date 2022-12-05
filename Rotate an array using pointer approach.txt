@@ -1,0 +1,30 @@
+//Name Ankit Kumar Mishra
+//Roll no 2100290120030
+//Program to implement cyclic rotation of an array
+#include<stdio.h>
+#include<stdlib.h>
+
+void rotate(int arr[],int n)
+{
+    int i,j=n-1;
+    while(i!=j)
+    {
+        int item=arr[j];
+        arr[j]=arr[i];
+        arr[i]=item;
+        i++;
+    }
+}
+void printArray(int arr[],int n)
+{
+    for(int i=0;i<n;i++)
+    printf("%d ",arr[i]);
+}
+int main()
+{
+    int arr[]={1,2,3,4,5};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    rotate(arr,n);
+    printArray(arr,n);
+    return 0;
+}
